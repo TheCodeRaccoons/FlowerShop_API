@@ -19,7 +19,7 @@ First of all lets check our schemas, for this API we have 2 schemas (ATM) which 
 
 # User Schema
 ```
- {
+ [
     "user":{
         "_id":"",
         "user_name":"",
@@ -30,14 +30,14 @@ First of all lets check our schemas, for this API we have 2 schemas (ATM) which 
         "address":"",
         "phone":""
     }
-}
+]
 ```
 
 # Store Schema
  
 ```
-	{
-    "store":{
+	[
+    {
         "_id":"",
         "store_name":"",
         "admin_user":"",
@@ -77,12 +77,12 @@ First of all lets check our schemas, for this API we have 2 schemas (ATM) which 
                 "category_icon":""
             }
         ],
-        "store_promos":{
+        "store_promos":[{
             "promo_id":"",
             "promo_description":"",
             "promo_amount": 0,
             "promo_banner":""
-        },
+        }],
         "products":[
             {
             "product_sku":"",
@@ -94,7 +94,7 @@ First of all lets check our schemas, for this API we have 2 schemas (ATM) which 
             }
         ]
     }
-}
+]
 ```
 
 ____________________________________
