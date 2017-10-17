@@ -12,8 +12,7 @@ Author & Contributor List
 
 
 Now the Actual How to Use this stuff
-====================
---------------------
+==================== 
 
 First of all lets check our schemas, for this API we have 2 schemas (ATM) which are the user schema and the store schema defined down here:
 
@@ -97,6 +96,7 @@ First of all lets check our schemas, for this API we have 2 schemas (ATM) which 
 ]
 ```
 
-____________________________________
-Now lets Define the API Usage
 ====================================
+
+Now lets Define the API Usage
+____________________________________
