@@ -35,7 +35,7 @@ First of all lets check our schemas, for this API we have 3 schemas (ATM) which 
 # Store Schema
  
 ```
-	[
+[
     {
         "_id":"",
         "store_name":"",
