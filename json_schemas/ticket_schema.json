@@ -1,0 +1,14 @@
+[
+    {
+        "_id":"",
+        "user_id":"",
+        "ticket_info":[{
+            "store_id":"",
+            "store_name":"",
+            "product_id":"",
+            "product_name":"",
+            "price":0
+        }],
+        "ticket_total":0
+    }
+]
