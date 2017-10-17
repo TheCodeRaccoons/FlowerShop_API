@@ -96,7 +96,6 @@ First of all lets check our schemas, for this API we have 2 schemas (ATM) which 
 ]
 ```
 
-====================================
 
 Now lets Define the API Usage
-____________________________________
+====================================
