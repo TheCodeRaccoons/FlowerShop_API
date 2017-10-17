@@ -14,7 +14,7 @@ Author & Contributor List
 Now the Actual How to Use this stuff
 ==================== 
 
-First of all lets check our schemas, for this API we have 2 schemas (ATM) which are the user schema and the store schema defined down here:
+First of all lets check our schemas, for this API we have 3 schemas (ATM) which are the user schema, the store schema and the ticket schema defined down here:
 
 # User Schema
 ```
@@ -96,6 +96,23 @@ First of all lets check our schemas, for this API we have 2 schemas (ATM) which 
 ]
 ```
 
+# Ticket schema
+```
+[
+    {
+        "_id":"",
+        "user_id":"",
+        "ticket_info":[{
+            "store_id":"",
+            "store_name":"",
+            "product_id":"",
+            "product_name":"",
+            "price":0
+        }],
+        "ticket_total":0
+    }
+]
+```
 
 Now lets Define the API Usage
 ====================================
