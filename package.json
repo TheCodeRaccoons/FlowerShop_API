@@ -1,0 +1,29 @@
+{
+  "name": "flowershop_api",
+  "version": "1.0.0",
+  "description": "Api REST para la app de florerias",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheCodeRaccoons/FlowerShop_API.git"
+  },
+  "author": "Jorge Cortez (thecoderaccoons.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheCodeRaccoons/FlowerShop_API/issues"
+  },
+  "homepage": "https://github.com/TheCodeRaccoons/FlowerShop_API#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
