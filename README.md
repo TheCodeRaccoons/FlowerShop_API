@@ -19,7 +19,7 @@ Sections:
 # User endpoints 
 <br>
 
-Llamar todos los usuarios<br>
+Get All Users<br>
 --------------------
 **GET:** https://{Heroku-link}/api/v1/users/
 
@@ -44,7 +44,7 @@ Example AJAX Call
 ```
 
 
-Llamar usuario por id<br>
+Get a Single user by ID<br>
 --------------------
 **GET:** https://{Heroku-link}/api/v1/user/{userid}/
 
@@ -71,7 +71,7 @@ Example AJAX Call:
 });
 ```
  
-Crear un nuevo usuario
+Create a new User<br>
 --------------------
 
 **POST:** https://{Heroku-link}/api/v1/user/
