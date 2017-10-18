@@ -114,7 +114,8 @@ Example AJAX Call
 ```
 
 # Json Schemas in the Database
-First of all lets check our schemas, for this API we have 3 schemas (ATM) which are the user schema, the store schema and the ticket schema defined down here:
+This Schemas are intended to learn how our Database works, and is only for informational purposes, in here we list the 3 main (Hopefully the noly 3) Schemas for the API where we will store the data, any changes will be listed in here.
+schema defined down here:
 
 User Schema
 --------------------
