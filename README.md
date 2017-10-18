@@ -49,7 +49,7 @@ Llamar usuario por id<br>
 **GET:** https://{Heroku-link}/api/v1/user/{userid}/
 
 **PARAMETERS:**<br>
--userid<br>
+- userid<br>
 
 ____________________________
 Example AJAX Call:
