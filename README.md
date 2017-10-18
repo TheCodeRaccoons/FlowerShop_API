@@ -120,8 +120,7 @@ schema defined down here:
 User Schema
 --------------------
 
-```
- [
+``` 
     "user":{
         "_id":"",
         "user_name":"",
@@ -131,15 +130,13 @@ User Schema
         "email":"",
         "address":"",
         "phone":""
-    }
-]
+    } 
 ```
 
 Store Schema
 --------------------
  
-```
-[
+``` 
     {
         "_id":"",
         "store_name":"",
@@ -196,14 +193,12 @@ Store Schema
             "product_image":""
             }
         ]
-    }
-]
+    } 
 ```
 
 Ticket schema
 --------------------
-```
-[
+``` 
     {
         "_id":"",
         "user_id":"",
@@ -215,6 +210,5 @@ Ticket schema
             "price":0
         }],
         "ticket_total":0
-    }
-]
+    } 
 ```
