@@ -113,6 +113,34 @@ Example AJAX Call
 });
 ```
 
+Delete a User by ID<br>
+--------------------
+**DELETE:** https://{Heroku-link}/api/v1/user/{userid}/
+
+**PARAMETERS:**<br>
+- userid<br>
+
+____________________________
+Example AJAX Call:
+```
+ $.ajax({
+    type: 'DELETE',
+    url: 'https://{Heroku-link}/api/v1/user/{userid}/',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false,
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
+
+
 # Json Schemas in the Database
 This Schemas are intended to learn how our Database works, and is only for informational purposes, in here we list the 3 main (Hopefully the noly 3) Schemas for the API where we will store the data, any changes will be listed in here.
 schema defined down here:
