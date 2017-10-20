@@ -140,6 +140,51 @@ Example AJAX Call:
 });
 ```
 
+Update a User by ID<br>
+--------------------
+**PUT:** https://{Heroku-link}/api/v1/user/{userid}/
+
+**PARAMETERS:**<br>
+- userid<br><br>
+
+**Data:**<br>
+- user_name
+- password
+- first_name
+- last_name
+- email
+- address
+- phone 
+
+____________________________
+Example AJAX Call:
+```
+ $.ajax({
+    type: 'PUT',
+    url: 'https://{Heroku-link}/api/v1/user/{userid}/',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false,
+    data: JSON.stringify({
+        "user_name":$('#user_name').val(),
+        "password": $('#password').val(),
+        "first_name": $('#first_name').val(),
+        "last_name": $('#last_name').val(), 
+        "email": $('#email').val(), 
+        "address": $('#address').val(),
+        "phone": $('#phone').val()
+    }), 
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
+
 
 # Json Schemas in the Database
 This Schemas are intended to learn how our Database works, and is only for informational purposes, in here we list the 3 main (Hopefully the noly 3) Schemas for the API where we will store the data, any changes will be listed in here.
