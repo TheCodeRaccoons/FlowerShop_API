@@ -21,14 +21,14 @@ Sections:
 
 Get All Users<br>
 --------------------
-**GET:** https://{Heroku-link}/api/v1/users/
+**GET:** https://appfloreria.herokuapp.com/api/v1/users/
 
 ____________________________
 Example AJAX Call
 ```
  $.ajax({
     type: 'GET',
-    url: 'https://{Heroku-link}/api/v1/user/{userid}/',            
+    url: 'https://appfloreria.herokuapp.com/api/v1/user/',            
     headers: {
         'Content-Type': 'application/json',
     },
@@ -46,7 +46,7 @@ Example AJAX Call
 
 Get a Single user by ID<br>
 --------------------
-**GET:** https://{Heroku-link}/api/v1/user/{userid}/
+**GET:** https://appfloreria.herokuapp.com/api/v1/user/{userid}/
 
 **PARAMETERS:**<br>
 - userid<br>
@@ -56,7 +56,7 @@ Example AJAX Call:
 ```
  $.ajax({
     type: 'GET',
-    url: 'https://{Heroku-link}/api/v1/user/{userid}/',            
+    url: 'https://appfloreria.herokuapp.com/api/v1/user/{userid}/',            
     headers: {
         'Content-Type': 'application/json',
     },
@@ -74,7 +74,7 @@ Example AJAX Call:
 Create a new User<br>
 --------------------
 
-**POST:** https://{Heroku-link}/api/v1/user/
+**POST:** https://appfloreria.herokuapp.com/api/v1/user/
 
 **PARAMETERS:**<br>
 - user_name
@@ -89,7 +89,7 @@ Example AJAX Call
 ```
  $.ajax({
     type: 'POST',
-    url: 'https://{Heroku-link}/api/v1/user/',            
+    url: 'https://appfloreria.herokuapp.com/api/v1/user/',            
     headers: {
         'Content-Type': 'application/json',
     },
@@ -115,7 +115,7 @@ Example AJAX Call
 
 Delete a User by ID<br>
 --------------------
-**DELETE:** https://{Heroku-link}/api/v1/user/{userid}/
+**DELETE:** https://appfloreria.herokuapp.com/api/v1/user/{userid}/
 
 **PARAMETERS:**<br>
 - userid<br>
@@ -125,7 +125,7 @@ Example AJAX Call:
 ```
  $.ajax({
     type: 'DELETE',
-    url: 'https://{Heroku-link}/api/v1/user/{userid}/',            
+    url: 'https://appfloreria.herokuapp.com/api/v1/user/{userid}/',            
     headers: {
         'Content-Type': 'application/json',
     },
@@ -142,7 +142,7 @@ Example AJAX Call:
 
 Update a User by ID<br>
 --------------------
-**PUT:** https://{Heroku-link}/api/v1/user/{userid}/
+**PUT:** https://appfloreria.herokuapp.com/api/v1/user/{userid}/
 
 **PARAMETERS:**<br>
 - userid<br><br>
@@ -161,7 +161,7 @@ Example AJAX Call:
 ```
  $.ajax({
     type: 'PUT',
-    url: 'https://{Heroku-link}/api/v1/user/{userid}/',            
+    url: 'https://appfloreria.herokuapp.com/api/v1/user/{userid}/',            
     headers: {
         'Content-Type': 'application/json',
     },
