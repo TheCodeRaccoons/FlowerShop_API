@@ -3,7 +3,7 @@
 const express = require('express')
 const UserController = require('../controllers/users')
 const StoreController = require('../controllers/stores')
-const api = express.Router()
+const api = express.Router() 
 /*Esquema Usuarios*/
 //Llamar todos los usuarios
 api.get('/v1/users', UserController.GetUsers)
@@ -20,7 +20,9 @@ api.put('/v1/user/:userid', UserController.UpdateUser)
 //Elimina un usuario por id
 api.delete('/v1/user/:userid', UserController.DeleteUser)
 
-
+//Realiza el Login
+api.post('/v1/user/login', UserController.SignIn)
+  
 
 /*Esquema Tiendas*/
 //Llamar todas las tiendas
