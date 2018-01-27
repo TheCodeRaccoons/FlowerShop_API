@@ -28,16 +28,8 @@ function GetUsers (req, res){
         
         if(err) return res.status(500).send({error: true, message: `Error al realizar la busqueda: ${err}`})
         if(!users) return res.status(404).send({error: true, message: `Lo sentimos no existen usuarios dados de alta`})
-                
-        if(!req.headers.autorization){
-            return res.status(500).send({error: true, message : 'No tienes Autorizacion para adquirir estos datos'})
-        }
-        if(req.headers.autorization == "22c4bf4888d59924d865226cf2c20dce"){
+            
         res.status(200).send( { error: false, users})
-        }
-        
-        return res.status(500).send({error: true, message : 'No tienes Autorizacion para adquirir estos datos'})
-
     })
 }
 

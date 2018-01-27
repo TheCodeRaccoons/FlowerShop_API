@@ -19,6 +19,37 @@ Sections:
 # User endpoints 
 <br>
 
+
+
+
+Login using Username/Password<br>
+--------------------
+**GET:** https://appfloreria.herokuapp.com/api/v1/user/login
+
+____________________________
+Example AJAX Call
+```
+ $.ajax({
+    type: 'GET',
+    url: 'https://appfloreria.herokuapp.com/api/v1/user/login',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false,data: JSON.stringify( {
+        "user_name":$('#user_name').val(),
+        "password": $('#password').val(), 
+    }), 
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
+
+
 Get All Users<br>
 --------------------
 **GET:** https://appfloreria.herokuapp.com/api/v1/users/
