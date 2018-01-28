@@ -343,6 +343,46 @@ Example AJAX Call
 ```
 
 
+Update single Store by id<br>
+--------------------
+
+**PUT:** https://appfloreria.herokuapp.com/api/v1/store/{storeId}
+<br>
+**PARAMETERS:**<br>
+- storeId<br>
+
+**Recommended:** Since this methos can update every aspect of the store you will need to have previously gathered the <br>
+data from the Get Stores or have the data retrived from the login (Which ever is the case) and make the modifications directly on it.
+
+**Ex:**<br>
+StoreData = **Data Retrived from the login/get request**
+**Then:**<br>
+StoreData.StoreName = "My Store's name"
+
+**Check the Json Schemas for info about the data** <br>
+____________________________
+Example AJAX Call:
+```
+ $.ajax({
+    type: 'PUT',
+    url: 'https://appfloreria.herokuapp.com/api/v1/store/{storeId}',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false,
+    data: JSON.stringify({ **StoreData** }), 
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
+
+<br>
+
 
 # Json Schemas in the Database
 This Schemas are intended to learn how our Database works, and is only for informational purposes, in here we list the 3 main (Hopefully the noly 3) Schemas for the API where we will store the data, any changes will be listed in here.

@@ -28,7 +28,7 @@ function CreateStore(req, res){
  
     store.save((err, storeAdded)=>{
         if(err){
-            res.status(500).send({error: true, message:`Error al guardar en la base de datos: ${err}`})
+            res.status(500).send({error: true, error_code:`SS-500`, message:`Error al guardar en la base de datos: ${err}`})
         }else{
             res.status(200).send({ error: false, message:'Establecimiento guardado exitosamente en la base de datos', store: storeAdded})
         }
@@ -38,8 +38,8 @@ function CreateStore(req, res){
 
 function GetStores (req, res){
     Store.find({}, (err, stores) => {
-        if(err) return res.status(500).send({error: true, message: `Error al realizar la busqueda: ${err}`})
-        if(!stores) return res.status(404).send({error: true, message: `Lo sentimos no existen usuarios dados de alta`})
+        if(err) return res.status(500).send({error: true, error_code:`GS-500`, message: `Error al realizar la busqueda: ${err}`})
+        if(!stores) return res.status(404).send({error: true, error_code:`GS-404`, message: `Lo sentimos no existen usuarios dados de alta`})
             
         res.status(200).send( { error: false, stores})
     })
@@ -50,8 +50,8 @@ function GetStore (req, res){
     let storeId = req.params.storeid
 
     Store.findById(storeId, (err, store) => {
-        if(err) return res.status(500).send({error: true, message: `Error al realizar la busqueda: ${err}`})
-        if(!store) return res.status(404).send({error: true, message: `Lo sentimos, No pudimos conectar con tu floreria, por favor intenta nuevamente`})
+        if(err) return res.status(500).send({error: true, error_code:`GSS-500`, message: `Error al realizar la busqueda: ${err}`})
+        if(!store) return res.status(404).send({error: true, error_code:`GSS-404`, message: `Lo sentimos, No pudimos conectar con tu floreria, por favor intenta nuevamente`})
 
         res.status(200).send({ error: false, store})
     })
@@ -59,15 +59,36 @@ function GetStore (req, res){
  
 
 function UpdateStore (req, res){
-  
+    let storeId = req.params.storeid
+    let update = req.body
+     
+    Store.findByIdAndUpdate(storeId, update, (err, storeUpdated) =>{
+        if(err) return res.status(500).send({error: true, error_code:`US-500`, message: `Error al realizar la operacion: ${err}`})
+        if(!storeUpdated) return res.status(500).send({error: true, error_code:`US-500`, message: `No se pudo realizar la modificacion`})
+        
+        res.status(200).send({Store_updated:true, error: false , storeUpdated }) 
+    })  
 }
  
 function DeleteStore (req, res){
-  
+    let storeId = req.params.storeid
+
+    Store.findById(storeId, (err, store) =>{
+        if(err) return res.status(500).send({error: true, error_code:`DS-500`, message: `Error al realizar la operacion: ${err}`})
+        if(!store) return res.status(404).send({error: true, error_code:`DS-404`, message: `Lo sentimos, La tienda que deseas eliminar no se encontro. Porfavor Intenta nuevamente`})
+        
+        store.remove(err =>{
+            if(err) return res.status(500).send({error: true, error_code:`DS-500`, message: `Error al realizar la operacion: ${err}`})
+            res.status(200).send({ error: false, message: `Usuario Eliminado exitosamente`})
+        })
+    })
+
 } 
 
 module.exports = {
     CreateStore,
     GetStores,
-    GetStore
+    GetStore,
+    UpdateStore,
+    DeleteStore
 }

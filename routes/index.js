@@ -33,6 +33,11 @@ api.post('/v1/store', StoreController.CreateStore )
 
 //Llamar una tienda por id
 api.get('/v1/store/:storeid', StoreController.GetStore)
+
+//Editar una tienda por id
+api.put('/v1/store/:storeid', StoreController.UpdateStore)
  
+//Elimina una tienda por id
+api.delete('/v1/store/:storeid', StoreController.DeleteStore)
 
 module.exports = api
