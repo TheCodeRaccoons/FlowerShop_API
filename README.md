@@ -315,6 +315,33 @@ Example AJAX Call
 });
 ```
 
+Get single Store by id<br>
+--------------------
+**GET:** https://appfloreria.herokuapp.com/api/v1/store/{storeId}
+<br>
+**PARAMETERS:**<br>
+- storeId<br>
+
+____________________________
+Example AJAX Call
+```
+ $.ajax({
+    type: 'GET',
+    url: 'https://appfloreria.herokuapp.com/api/v1/store/{storeId}',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false,
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
+
 
 
 # Json Schemas in the Database
