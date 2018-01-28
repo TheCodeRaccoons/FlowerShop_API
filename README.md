@@ -13,6 +13,7 @@ Author & Contributor List
 Sections:
 ==================== 
 * [User endpoints](#user-endpoints)
+* [Store endpoints](#store-endpoints)
 * [Json Schemas in the Database](#json-schemas-in-the-database)
 <br>
 
@@ -216,7 +217,8 @@ Example AJAX Call:
 });
 ```
 
-
+<br>
+<br>
 # Store endpoints 
 <br>
  
