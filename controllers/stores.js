@@ -47,15 +47,16 @@ function GetStores (req, res){
 
 
 function GetStore (req, res){
-     let storeId = req.params.storeId
+    let storeId = req.params.storeid
 
     Store.findById(storeId, (err, store) => {
         if(err) return res.status(500).send({error: true, message: `Error al realizar la busqueda: ${err}`})
-        if(!store) return res.status(404).send({error: true, message: `Lo sentimos, el usuario que buscas no existe. Porfavor Intenta nuevamente`})
+        if(!store) return res.status(404).send({error: true, message: `Lo sentimos, No pudimos conectar con tu floreria, por favor intenta nuevamente`})
 
         res.status(200).send({ error: false, store})
     })
 } 
+ 
 
 function UpdateStore (req, res){
   
@@ -67,5 +68,6 @@ function DeleteStore (req, res){
 
 module.exports = {
     CreateStore,
-    GetStores
+    GetStores,
+    GetStore
 }
