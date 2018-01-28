@@ -47,7 +47,14 @@ function GetStores (req, res){
 
 
 function GetStore (req, res){
-    
+     let storeId = req.params.storeId
+
+    Store.findById(storeId, (err, store) => {
+        if(err) return res.status(500).send({error: true, message: `Error al realizar la busqueda: ${err}`})
+        if(!store) return res.status(404).send({error: true, message: `Lo sentimos, el usuario que buscas no existe. Porfavor Intenta nuevamente`})
+
+        res.status(200).send({ error: false, store})
+    })
 } 
 
 function UpdateStore (req, res){
