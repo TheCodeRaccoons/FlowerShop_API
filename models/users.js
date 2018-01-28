@@ -2,8 +2,7 @@
 
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const bcrypt = require('bcrypt-nodejs')
-
+const bcrypt = require('bcrypt-nodejs') 
 
 const UserSchema = Schema({ 
         user_name: String,

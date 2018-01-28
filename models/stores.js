@@ -15,6 +15,7 @@ const StoreSchema = Schema({
         store_raiting: Number, 
         store_logo: String, 
         store_social:{
+            store_web: String,
             store_facebook: String,
             store_instagram: String
         },

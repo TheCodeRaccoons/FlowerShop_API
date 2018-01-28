@@ -9,9 +9,7 @@ function CreateStore(req, res){
     store.admin_user = req.body.admin_user
     store.admin_password = req.body.admin_password
     store.store_address = req.body.store_address
-    store.store_zip_code = req.body.zip_code
-    ///
-    store.store_zip_code = req.body.zip_code
+    store.store_zip_code = req.body.zip_code 
     store.store_phone = req.body.store_phone
     store.store_email = req.body.store_email
     store.store_description = req.body.store_description
@@ -27,8 +25,7 @@ function CreateStore(req, res){
     store.store_sections.promotions.title = req.body.promotions_title
     store.store_sections.share.banner = req.body.share_banner
     store.store_sections.share.title = req.body.share_title 
-
-
+ 
     store.save((err, storeAdded)=>{
         if(err){
             res.status(500).send({error: true, message:`Error al guardar en la base de datos: ${err}`})
@@ -49,20 +46,17 @@ function GetStores (req, res){
 }
 
 
-function GetUser (req, res){
+function GetStore (req, res){
     
-}
+} 
 
-
-function UpdateUser (req, res){
+function UpdateStore (req, res){
   
 }
-
-
-function DeleteUser (req, res){
+ 
+function DeleteStore (req, res){
   
-}
-
+} 
 
 module.exports = {
     CreateStore,

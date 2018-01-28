@@ -217,6 +217,100 @@ Example AJAX Call:
 ```
 
 
+# Store endpoints 
+<br>
+ 
+
+Create a new Store<br>
+--------------------
+
+**POST:** https://appfloreria.herokuapp.com/api/v1/store/
+
+**PARAMETERS:**<br>
+- user_name (Store)
+- password (Store)
+____________________________
+Example AJAX Call
+```
+ $.ajax({
+    type: 'POST',
+    url: 'https://appfloreria.herokuapp.com/api/v1/store/',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false, 
+    data: JSON.stringify( {
+        "store_name": "",
+        "admin_user": $('#admin_user').val(),
+        "admin_password": $('#admin_password').val(), 
+        "store_address":"", 
+        "store_zip_code": "", 
+        "store_phone":"", 
+        "store_email":"", 
+        "store_description":"",
+        "store_raiting": "", 
+        "store_logo": "" , 
+        "store_social":{
+            "store_web": "",
+            "store_facebook": "",
+            "store_instagram": ""
+        },
+        "store_sections":{
+            "about":{ 
+                "banner": "",
+                "title": ""
+                },
+            "catalog":{ 
+                "banner": "",
+                "title": ""
+            },
+            "promotions":{
+                "banner": "",
+                "title": ""},
+            "share":{ }
+        },
+        "store_categories":[],
+        "store_promos":[],
+        "products":[]
+}) 
+    }), 
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
+
+
+Get All Stores<br>
+--------------------
+**GET:** https://appfloreria.herokuapp.com/api/v1/stores/
+
+____________________________
+Example AJAX Call
+```
+ $.ajax({
+    type: 'GET',
+    url: 'https://appfloreria.herokuapp.com/api/v1/stores/',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false,
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
+
+
+
 # Json Schemas in the Database
 This Schemas are intended to learn how our Database works, and is only for informational purposes, in here we list the 3 main (Hopefully the noly 3) Schemas for the API where we will store the data, any changes will be listed in here.
 schema defined down here:
