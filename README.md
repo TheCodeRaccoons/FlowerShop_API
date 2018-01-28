@@ -228,7 +228,8 @@ Example AJAX Call:
 
 Create a new Store<br>
 --------------------
-
+It is not necesary to store all the data right away but username/password Must be added, 
+the resto of the data can be modified later depending on the admin's need
 **POST:** https://appfloreria.herokuapp.com/api/v1/store/
 
 **PARAMETERS:**<br>
