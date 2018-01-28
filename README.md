@@ -218,9 +218,12 @@ Example AJAX Call:
 ```
 
 <br>
-<br>
+
+
 # Store endpoints 
 <br>
+
+ 
  
 
 Create a new Store<br>
