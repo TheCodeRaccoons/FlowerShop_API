@@ -223,8 +223,6 @@ Example AJAX Call:
 # Store endpoints 
 <br>
 
- 
- 
 
 Create a new Store<br>
 --------------------
@@ -381,6 +379,36 @@ Example AJAX Call:
 });
 ```
 
+<br>
+
+
+
+Delete a Store by ID<br>
+--------------------
+**DELETE:** https://appfloreria.herokuapp.com/api/v1/store/{storeId}
+
+**PARAMETERS:**<br>
+- storeId<br>
+
+____________________________
+Example AJAX Call:
+```
+ $.ajax({
+    type: 'DELETE',
+    url: 'https://appfloreria.herokuapp.com/api/v1/store/{storeId}',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false,
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
 <br>
 
 
