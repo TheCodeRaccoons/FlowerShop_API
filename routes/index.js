@@ -33,9 +33,6 @@ api.post('/v1/store', StoreController.CreateStore )
 
 //Llamar a una tienda por id
 api.get('/v1/store/:storeid', StoreController.GetStore)
-
  
-
-
 
 module.exports = api
