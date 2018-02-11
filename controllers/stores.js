@@ -2,7 +2,6 @@
 
 const Store = require('../models/stores')
 
-
 function CreateStore(req, res){
     let store = new Store()
     store.store_name = req.body.store_name
@@ -15,6 +14,7 @@ function CreateStore(req, res){
     store.store_description = req.body.store_description
     store.store_raiting = req.body.store_raiting
     store.store_logo = req.body.store_logo
+    store.store_representative = req.body.store_representative
     store.store_social.store_facebook = req.body.store_facebook
     store.store_social.store_instagram = req.body.store_instagram
     store.store_sections.about.banner = req.body.about_banner

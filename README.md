@@ -256,6 +256,7 @@ Example AJAX Call
         "store_description":"",
         "store_raiting": "", 
         "store_logo": "" , 
+        "store_representative" : "",
         "store_social":{
             "store_web": "",
             "store_facebook": "",
