@@ -14,6 +14,7 @@ Sections:
 ==================== 
 * [User endpoints](#user-endpoints)
 * [Store endpoints](#store-endpoints)
+* [Admin endpoints](#admin-endpoints)
 * [Json Schemas in the Database](#json-schemas-in-the-database)
 <br>
 
@@ -379,9 +380,7 @@ Example AJAX Call:
 });
 ```
 
-<br>
-
-
+<br> 
 
 Delete a Store by ID<br>
 --------------------
@@ -411,6 +410,105 @@ Example AJAX Call:
 ```
 <br>
 
+
+# Admin endpoints 
+<br>
+ 
+Login for Admin using Username/Password<br>
+--------------------
+**GET:** https://appfloreria.herokuapp.com/api/v1/admin/login
+
+____________________________
+Example AJAX Call
+```
+ $.ajax({
+    type: 'GET',
+    url: 'https://appfloreria.herokuapp.com/api/v1/admin/login',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false,data: JSON.stringify( {
+        "admin_user" :$('#admin_user').val(),
+        "admin_password": $('#admin_password').val(), 
+    }), 
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
+<br>
+
+Create a new User<br>
+--------------------
+
+**POST:** https://appfloreria.herokuapp.com/api/v1/admin
+
+**PARAMETERS:**<br>
+- admin_user
+- admin_password 
+____________________________
+Example AJAX Call
+```
+ $.ajax({
+    type: 'POST',
+    url: 'https://appfloreria.herokuapp.com/api/v1/admin',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false, 
+    data: JSON.stringify( {
+        "admin_user" :$('#admin_user').val(),
+        "admin_password": $('#admin_password').val(), 
+    }), 
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
+<br>
+
+Update an Admin's password by ID<br>
+--------------------
+**PUT:** https://appfloreria.herokuapp.com/api/v1/admin/update/{adminId}
+
+**PARAMETERS:**<br>
+- adminId<br><br>
+
+**Data:**<br> 
+- admin_password 
+
+____________________________
+Example AJAX Call:
+```
+ $.ajax({
+    type: 'PUT',
+    url: 'https://appfloreria.herokuapp.com/api/v1/admin/update/{adminId}',            
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    dataType: "JSON", 
+    async: false,
+    data: JSON.stringify({
+        "admin_password": $('#admin_password').val()
+    }), 
+    success: function(data){
+        console.log(data)
+    },            
+    error: function (errMsg) {
+        console.log(errMsg)
+    }
+});
+```
+
+<br>
 
 # Json Schemas in the Database
 This Schemas are intended to learn how our Database works, and is only for informational purposes, in here we list the 3 main (Hopefully the noly 3) Schemas for the API where we will store the data, any changes will be listed in here.
@@ -511,3 +609,14 @@ Ticket schema
         "ticket_total":0
     } 
 ```
+
+Admin schema
+--------------------
+``` 
+{ 
+    "_id":"",
+    "admin_user" : "",
+    "admin_password" : ""
+}
+``` 
+
