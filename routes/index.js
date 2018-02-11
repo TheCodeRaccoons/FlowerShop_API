@@ -3,6 +3,7 @@
 const express = require('express')
 const UserController = require('../controllers/users')
 const StoreController = require('../controllers/stores')
+const AdminController = require('../controllers/admins')
 const api = express.Router() 
 /*Esquema Usuarios*/
 //Llamar todos los usuarios
@@ -39,5 +40,17 @@ api.put('/v1/store/:storeid', StoreController.UpdateStore)
  
 //Elimina una tienda por id
 api.delete('/v1/store/:storeid', StoreController.DeleteStore)
+
+
+/*Esquema Login Admin*/
+//Genera a un nuevo administrador
+api.post('/v1/admin', AdminController.CreateAdmin)
+
+//Edita el admin
+api.put('/v1/admin/update/:adminId', AdminController.UpdateAdmin)
+
+//Realiza el Login de admin
+api.post('/v1/admin/login', AdminController.AdminSignIn)
+
 
 module.exports = api
