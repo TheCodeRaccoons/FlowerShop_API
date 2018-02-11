@@ -278,8 +278,7 @@ Example AJAX Call
         },
         "store_categories":[],
         "store_promos":[],
-        "products":[]
-}) 
+        "products":[] 
     }), 
     success: function(data){
         console.log(data)

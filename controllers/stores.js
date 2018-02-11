@@ -70,6 +70,7 @@ function UpdateStore (req, res){
     })  
 }
  
+
 function DeleteStore (req, res){
     let storeId = req.params.storeid
 
@@ -84,6 +85,7 @@ function DeleteStore (req, res){
     })
 
 } 
+
 
 module.exports = {
     CreateStore,
