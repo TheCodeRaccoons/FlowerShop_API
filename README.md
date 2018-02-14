@@ -442,7 +442,7 @@ Example AJAX Call
 ```
 <br>
 
-Create a new User<br>
+Create a new Admin User<br>
 --------------------
 
 **POST:** https://appfloreria.herokuapp.com/api/v1/admin
